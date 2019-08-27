@@ -3,7 +3,7 @@ A  WordPress Plugin that allows you to transform your site to an OnePage Style o
 Just select a couple of pages, order them how they will display and that's it !
 ## Requirements for developers
 
-if you want contribute or extands the Plugin : 
+if you want contribute or extends the Plugin : 
 
 Install the  module bundler Webpack v4+ , webpack-cli  ***globally***.
 ```
