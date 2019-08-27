@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: One Page Transformer
-Plugin URI: http://www.
+Plugin URI: https://github.com/younes-dro/onepage-transformer
 Description: Transform your site on the fly from an ordinary desgin to an OnePage Style.
 Version: 1.0.0
 Author: Younes DRO
@@ -41,7 +41,7 @@ function opt_create_menu(){
   add_theme_page( 'OnePage Transformer', 'OnePage Transformer', 'manage_options', __FILE__,'opt_display_menu' );
 }
 function opt_display_menu(){
-  echo '<div id="main"></div>';
+  echo '<div id="main" class="wrap"></div>';
 }
 
 /**
