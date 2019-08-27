@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A WordPress starter plugin for those who want to use ReactJs in the development of WordPress Plugins.",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "primeicons": "^2.0.0",
+    "primereact": "^3.1.8"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -11,8 +15,12 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "bable-loader": "^0.0.1-security",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "image-webpack-loader": "^5.0.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "style-loader": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
