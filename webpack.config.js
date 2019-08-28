@@ -1,6 +1,7 @@
 // var webpack = require("webpack");
 
 module.exports = {
+  mode: 'development',
   entry : "./app.js",
   output : {
     filename: "public/bundle.js"
@@ -9,22 +10,24 @@ module.exports = {
     rules: [
         {
           exclude: /node_modules/,
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/react',
-              {
-              'plugins': ['@babel/plugin-proposal-class-properties']
+          use:{
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/react'
+              ],
+              plugins: [
+                '@babel/plugin-proposal-class-properties'
+              ]
             }
-          ]
-        }
+          }
       },
       {
     test:/\.css$/,
     use:['style-loader','css-loader']
 },
-{
+        {
   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
   use: [
     {
@@ -36,7 +39,7 @@ module.exports = {
     }
   ]
 },
-{
+        {
   test: /\.(gif|png|jpe?g|svg)$/i,
   use: [
     'file-loader',
