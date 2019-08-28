@@ -8,11 +8,12 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
 class NavBar extends Component {
+
   render() {
     return (
       <TabView>
           <TabPanel header="Header I">
-              Content I
+              Content I 
           </TabPanel>
           <TabPanel header="Header II">
               Content II
