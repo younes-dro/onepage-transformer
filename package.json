@@ -1,5 +1,5 @@
 {
-  "name": "wp-plugin-reactjs",
+  "name": "onepage-transformer",
   "version": "1.0.0",
   "description": "A WordPress starter plugin for those who want to use ReactJs in the development of WordPress Plugins.",
   "main": "app.js",
@@ -23,7 +23,9 @@
     "style-loader": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
