@@ -9,18 +9,10 @@ module.exports = {
   module:{
     rules: [
         {
+
           exclude: /node_modules/,
           use:{
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                '@babel/preset-env',
-                '@babel/react'
-              ],
-              plugins: [
-                '@babel/plugin-proposal-class-properties'
-              ]
-            }
+            loader: 'babel-loader'
           }
       },
       {
@@ -53,5 +45,8 @@ module.exports = {
   ],
 }
     ]
+  },
+  resolve:{
+    extensions: ['.js','.jsx']
   }
 };
