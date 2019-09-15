@@ -32,6 +32,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+define( 'ONEPAGE_TRANSFORMER_VERSION', '1.0.0' );
+
 /*
  * Adds a submenu to the Settings menu.
  * the page will contain the ID of html element that hosts our JSX components.
@@ -44,7 +46,17 @@ function opt_create_menu() {
 }
 
 function opt_display_menu() {
-    echo '<div id="main" class="wrap"></div>';
+    echo '<div id="main" class="wrap"></div>
+    <div>        <p class="target">p1</p>
+    <p class="target">p1</p>
+
+    <p class="target">p1</p></div>
+    <button id="add">Add</button>
+    ' ;
+    echo "<pre>";
+    print_r(get_current_screen());
+    echo "</pre>";
+    echo ONEPAGE_TRANSFORMER_VERSION;
 }
 
 /**
@@ -56,8 +68,25 @@ function opt_enqueue_script(  ) {
     global $onepage_transformer;
     $screen = get_current_screen();
     if ( $screen->id == $onepage_transformer ) {
+        wp_enqueue_script('thickbox');
         wp_enqueue_script(
-                'opt-js', plugins_url('/dist/public/bundle.js', __FILE__), ['wp-element', 'wp-components'], time(), // You can add the current datetime in production env.
-                true);
+            'opt-ajax', 
+            plugins_url('/dist/public/ajax.js', __FILE__),['jquery'],
+             ONEPAGE_TRANSFORMER_VERSION ,
+             true);
+            
+        wp_enqueue_script(
+            'opt-js', 
+            plugins_url('/dist/public/bundle.js', __FILE__),
+             ['opt-ajax','wp-element', 'wp-components'], 
+             ONEPAGE_TRANSFORMER_VERSION,
+            true);
     }
+    /**
+     * 
+     */
+    add_action('admin_print_styles', function(){
+        wp_enqueue_style('onepage-transformer-css', 
+        plugins_url('/dist/public/css/style.css', __FILE__));
+    });  
 }

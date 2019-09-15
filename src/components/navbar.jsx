@@ -1,31 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-import {TabView,TabPanel} from 'primereact/tabview';
-
-
-import 'primereact/resources/themes/luna-green/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
+import { TabView, TabPanel } from "primereact/tabview";
 
 class NavBar extends Component {
+  componentDidMount() {
+    jQuery("#pagesStack").html("list of pages ! ");
+  }
 
   render() {
     return (
       <TabView>
-          <TabPanel header="Header I">
-              Content I 
-          </TabPanel>
-          <TabPanel header="Header II">
-              Content II
-          </TabPanel>
-          <TabPanel header="Header III">
-              Content III
-          </TabPanel>
+        <TabPanel header="Header I">
+          <div id="pagesStack"></div>
+        </TabPanel>
+        <TabPanel header="Header II">Content II</TabPanel>
+        <TabPanel header="Header III">Content III</TabPanel>
       </TabView>
-
     );
   }
-
 }
 
-export default NavBar ;
+export default NavBar;
