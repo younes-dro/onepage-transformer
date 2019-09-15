@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 
-// import NavBar from "./components/navbar";
-import TabMenuDemo from "./components/tabmenu";
+import Tab from "./components/tabview";
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <TabMenuDemo />
+        <Tab />
       </React.Fragment>
     );
   }

@@ -46,17 +46,7 @@ function opt_create_menu() {
 }
 
 function opt_display_menu() {
-    echo '<div id="main" class="wrap"></div>
-    <div>        <p class="target">p1</p>
-    <p class="target">p1</p>
-
-    <p class="target">p1</p></div>
-    <button id="add">Add</button>
-    ' ;
-    echo "<pre>";
-    print_r(get_current_screen());
-    echo "</pre>";
-    echo ONEPAGE_TRANSFORMER_VERSION;
+    echo '<div id="main" class="wrap"></div>';
 }
 
 /**
