@@ -4,14 +4,17 @@ import { TabView, TabPanel } from "primereact/tabview";
 
 class Tab extends Component {
   componentDidMount() {
-    jQuery("#pagesStack").html("list of pages ! ");
+    console.log("Tab mounted");
+    jQuery(document).ready(function($) {
+      $(".pages").append("<b>loading...</b>");
+    });
   }
 
   render() {
     return (
       <TabView>
         <TabPanel header="Transformer">
-          <div id="pagesStack">Pages </div>
+          <div className="pages"></div>
         </TabPanel>
         <TabPanel header="Documentation">Open File md</TabPanel>
         <TabPanel header="Settings">

@@ -76,7 +76,11 @@ function opt_enqueue_script(  ) {
      * 
      */
     add_action('admin_print_styles', function(){
+        global $onepage_transformer;
+        $screen = get_current_screen();
+        if ( $screen->id == $onepage_transformer ) {
         wp_enqueue_style('onepage-transformer-css', 
         plugins_url('/dist/public/css/style.css', __FILE__));
+        }
     });  
 }
