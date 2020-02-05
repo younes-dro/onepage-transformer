@@ -5,6 +5,6 @@ Just select a couple of pages, order them how they will display and that's it !
 
 > The main menu is dynamically generated based on the page order chosen in the Front Page
 
-## Requirements for developers
+## Requirements for developers(TODO)
 
-## Installation
+## Installation (TODO)
